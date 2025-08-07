@@ -9,3 +9,8 @@ const Gameboard = (() => {
   }
   return { getBoard, resetBoard, markSquare }
 })()
+
+const Player = function (name, symbol) {
+
+  return { name, symbol }
+}
