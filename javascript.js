@@ -8,6 +8,7 @@ const Gameboard = (() => {
   return { getBoard, resetBoard, markSquare }
 })()
 
+// Call game().play() to pick a square
 const Player = function (name, symbol) {
   return { name, symbol }
 }
@@ -56,6 +57,7 @@ const game = function () {
       console.log("Checking wincon");
       if (checkWinner(Gameboard.getBoard(), currentPlayer.symbol) === true) {
         declareWinner(currentPlayer)
+        return
       }
     }
     turnAlternator()
@@ -64,3 +66,9 @@ const game = function () {
 
   return { play }
 }
+
+game().play(0)
+game().play(4)
+game().play(1)
+game().play(5)
+game().play(2)
