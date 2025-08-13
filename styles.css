@@ -1,3 +1,64 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: rgb(89, 89, 89);
+  padding: 0;
+  margin: 0;
+}
+
+section.project {
+  max-height: 100vh;
+  min-width: 100vh;
+  display: grid;
+}
+
+section.title {
+  height: 10rem;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px black solid;
+}
+
+h1 {
+  margin: 0;
+  font-size: 8rem;
+}
+
+section.players {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(225, 230, 235);
+  font-size: 3rem;
+  width: 30rem;
+  height: 4rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: fit-content;
+  font-size: 2rem;
+}
+
+form>input {
+  font-size: 1.5rem;
 }
