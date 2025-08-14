@@ -15,9 +15,9 @@ body {
 }
 
 section.project {
-  max-height: 100vh;
-  min-width: 100vh;
-  display: grid;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 section.title {
@@ -33,12 +33,14 @@ section.title {
 h1 {
   margin: 0;
   font-size: 8rem;
+  white-space: nowrap;
 }
 
 section.players {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  background-color: aliceblue;
 }
 
 .display {
@@ -62,4 +64,43 @@ form {
 form>input {
   font-size: 1.5rem;
   width: 8.7rem;
+}
+
+section.game {
+  background-color: white;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  min-width: 30rem;
+  min-height: 30rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal-width columns */
+  grid-template-rows: repeat(3, 1fr);
+  /* 3 equal-height rows */
+  gap: 5px;
+  /* space between cells */
+  justify-content: center;
+  /* center the grid horizontally inside parent */
+  align-content: center;
+  /* center the grid vertically inside parent */
+  background-color: black;
+  max-width: fit-content;
+  max-height: fit-content;
+  margin-bottom: 17rem;
+}
+
+
+.board>div {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  /* center content horizontally inside cell */
+  align-items: center;
+  /* center content vertically inside cell */
+  font-size: 2rem;
 }
