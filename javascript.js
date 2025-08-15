@@ -64,6 +64,13 @@ const game = function () {
     console.log(`It is now ${currentPlayer.name}'s turn`);
   }
 
+  // Display controller
+  const DisplayController = (() => {
+    const renderBoard = function () {
+
+    }
+  })();
+
   return { play }
 }
 
